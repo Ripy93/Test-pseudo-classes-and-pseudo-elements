@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Krona One", sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#pseudo_classes, #pseudo_elementos {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ddd;
+}
+
+#pseudo_elementos {
+    border-right: none;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+#hover {
+    border: 1px solid #ddd;
+    width: 23%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+#hover:hover {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+#active button {
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    background-color: #ff6347;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.1s;
+    border-radius: 5px;
+}
+
+#active button:active {
+    transform: scale(0.85);
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+a:visited {
+    color: #ff6347;
+}
+
+a:hover, a:focus {
+    color: #0056b3;
+}
+
+#first_line p::first-line {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+#first_letter p::first-letter {
+    color: #ff6347;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#before p::before {
+    content: "Esse texto foi feito no css pelo 'Before' ";
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#after p::after {
+    content: " e esse foi feito no css pelo 'After'";
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#marker ul li::marker {
+    color: #ff6347;
+    font-size: 20px;
+    font-weight: bold;
+}
